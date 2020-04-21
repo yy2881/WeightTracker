@@ -54,7 +54,7 @@ public class Calculator {
 	 * @param activityLevel
 	 * @return
 	 */
-	public double calculateDailyEnergyExpenditure(double inactiveBMR, int activityLevel) {
+	public int calculateDailyEnergyExpenditure(double inactiveBMR, int activityLevel) {
 
 		if (activityLevel == 1) { //Sendary BMR (little or no exercise, desk job)
 			dailyEnergyExpenditure = inactiveBMR * 1.2;
@@ -67,7 +67,7 @@ public class Calculator {
 		}else if (activityLevel == 5) { //Extra active BMR (hard daily exercise/sports & physical job)
 			dailyEnergyExpenditure = inactiveBMR * 1.9;
 		}
-		return dailyEnergyExpenditure;
+		return (int) Math.round(dailyEnergyExpenditure);
 	}
 
 
@@ -117,7 +117,7 @@ public class Calculator {
 	 */
 	public String[] generateOutput(int activityLevel, int targetDays, double curWeight, double height, double tarWeight,int age,String gender) {
 		String [] myArrayOutput = new String [5];
-		double dailyEnergyExpenditure = calculateDailyEnergyExpenditure(calculateInactiveBMR(gender,curWeight,height,age),activityLevel);
+		int dailyEnergyExpenditure = calculateDailyEnergyExpenditure(calculateInactiveBMR(gender,curWeight,height,age),activityLevel);
 		int dailyCalorieLoss = calculateDailyCalorieLoss(calculateCalorieDeficit(curWeight,tarWeight),targetDays);
 		myArrayOutput[0] = String.valueOf(curWeight-tarWeight);
 		myArrayOutput[1] = String.valueOf(targetDays);
