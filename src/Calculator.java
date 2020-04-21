@@ -70,27 +70,15 @@ public class Calculator {
 		return dailyEnergyExpenditure;
 	}
 
-	/**
-	 * This Method Calculates how much weight i need to lose to get to my targeted weight
-	 * @param currentWeight
-	 * @param targetWeight
-	 * @return
-	 */
-	public double calculateTargetWeightToLose(double currentWeight, double targetWeight) {
-		weightToLose = currentWeight - targetWeight; //How many lbs i would need to lose to get to my target weight
-		return weightToLose;
-	}
-
 
 	/**
 	 * Method calculates number of calories to lose to achieve targeted weight
 	 * @param currentWeight
 	 * @param targetWeight
-	 * @param dailyEnergyExpenditure
 	 * @return
 	 */
-	public double calculateCalorieDeficit(double currentWeight, double targetWeight, double dailyEnergyExpenditure) {
-		totalPoundDeficit = weightToLose * 3500; // Number of calories i need to lose to get to my target weight
+	public double calculateCalorieDeficit(double currentWeight, double targetWeight) {
+		totalPoundDeficit = (currentWeight - targetWeight) * 3500; // Number of calories i need to lose to get to my target weight
 		return totalPoundDeficit;
 	}
 
@@ -130,12 +118,12 @@ public class Calculator {
 	public String[] generateOutput(int activityLevel, int targetDays, double curWeight, double height, double tarWeight,int age,String gender) {
 		String [] myArrayOutput = new String [5];
 		double dailyEnergyExpenditure = calculateDailyEnergyExpenditure(calculateInactiveBMR(gender,curWeight,height,age),activityLevel);
-		int dailyCalorieLoss = calculateDailyCalorieLoss(calculateCalorieDeficit(curWeight,tarWeight,dailyEnergyExpenditure),targetDays);
+		int dailyCalorieLoss = calculateDailyCalorieLoss(calculateCalorieDeficit(curWeight,tarWeight),targetDays);
 		myArrayOutput[0] = String.valueOf(curWeight-tarWeight);
 		myArrayOutput[1] = String.valueOf(targetDays);
 		myArrayOutput[2] = String.valueOf(dailyEnergyExpenditure);
-		myArrayOutput[3] = String.valueOf(dailyCalorieLoss);
-		myArrayOutput[4] = String.valueOf(calculateDailyCaloricIntake(dailyCalorieLoss,dailyEnergyExpenditure));
+		myArrayOutput[3] = String.valueOf(calculateDailyCaloricIntake(dailyCalorieLoss,dailyEnergyExpenditure));
+		myArrayOutput[4] = String.valueOf(dailyCalorieLoss);
 		return myArrayOutput;
 
 	}

@@ -32,7 +32,7 @@ public class MyServlet extends HttpServlet {
 		int age = Integer.parseInt(request.getParameter("form_age"));
 		int days = Integer.parseInt(request.getParameter("form_days"));
 		String gender = request.getParameter("form_gender");
-		double height = Double.parseDouble(request.getParameter("form_height"));
+		double height = Double.parseDouble(request.getParameter("form_height")) * 12;
 		
 		
 		//calculate nutrition message
