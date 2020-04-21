@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Calculator</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+   
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Headings -->
+    <H1>Weight Loss Planner</H1>
+ 
+    <form method="GET" action="MyServlet" > 
+  <div class="form-group">
+    <label for="form-height">Height(feet)</label>
+    <input type="text" class="form-control" name="form_height" placeholder="eg. 6.0">
+  </div>
+  <div class="form-group">
+    <label for="form-curWeight">Current Weight(lbs)</label>
+    <input type="text" class="form-control" name="form_curWeight" placeholder="eg. 160">
+  </div>
+  <div class="form-group">
+    <label for="form-tarWeight">Target Weight(lbs)</label>
+    <input type="text" class="form-control" name="form_tarWeight" placeholder="eg. 140">
+  </div>
+  <div class="form-group">
+    <label for="form-age">Age</label>
+    <input type="text" class="form-control" name="form_age" placeholder="eg. 28">
+  </div>
+  <div class="form-group">
+    <label for="form-gender">Gender</label>
+    <select type="text" class="form-control" name="form_gender">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="form-activityLevel">Activity Level (1 Most Light - 5 Most hard)</label>
+    <select type="text" class="form-control" name="form_activityLevel">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+   <div class="form-group">
+    <label for="form-age">Days to lose weight</label>
+    <input type="text" class="form-control" name="form_days" placeholder="eg. 20"> 
+  </div>
+  <input type="submit" class="btn btn-primary"></input>
+  <p id="submit-result"></p>
+</form>
+    
+
+</body>
+</html>
