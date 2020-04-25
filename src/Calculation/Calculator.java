@@ -1,3 +1,4 @@
+package Calculation;
 
 import javax.swing.JOptionPane;
 import java.lang.Math;
@@ -124,11 +125,11 @@ public class Calculator {
 		myArrayOutput[0] = String.valueOf(curWeight-tarWeight);
 		//target days
 		myArrayOutput[1] = String.valueOf(targetDays);
-		//daily Safe calorie intake
+		//daily safe calorie intake
 		myArrayOutput[2] = String.valueOf(dailyEnergyExpenditure);
 		//daily calorie loss
 		myArrayOutput[3] = String.valueOf(dailyCalorieLoss);
-		//daily calorie Intake to lose weight
+		//daily calorie intake to lose weight
 		myArrayOutput[4] = String.valueOf(calculateDailyCaloricIntake(dailyCalorieLoss,dailyEnergyExpenditure));
 		return myArrayOutput;
 

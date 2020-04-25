@@ -1,3 +1,4 @@
+package Servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -8,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
-
+import Calculation.Calculator;
 
 
 @WebServlet("/MyServlet")
@@ -27,6 +28,8 @@ public class MyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//get input values from html form
 		double currentWeight = Double.parseDouble(request.getParameter("form_curWeight"));
 		double targetWeight = Double.parseDouble(request.getParameter("form_tarWeight"));
 		int activityLevel = Integer.parseInt(request.getParameter("form_activityLevel"));
@@ -36,35 +39,37 @@ public class MyServlet extends HttpServlet {
 		double height = Double.parseDouble(request.getParameter("form_height")) * 12;
 		
 		
-		//calculate nutrition message
+		
+		//instantiate calculator and calculate nutrition message
 		Calculator calculator = new Calculator();
 		String[] outputMessage = calculator.generateOutput(activityLevel,days,currentWeight,height,targetWeight,age,gender);
 
 		
-        //handle corner cases: 
-        
+		//instantiate HttpResponseHelper and send http response back
+		HttpResponseHelper helper = new HttpResponseHelper();
+		
+		
         if(Integer.parseInt(outputMessage[2]) < Integer.parseInt(outputMessage[3])) {
-        	JOptionPane.showMessageDialog(null, "You should try to lose around 5 to 10% of your current body weight, one to two pounds per week or try to reduce your calorie intake by 500 - 1,000 calories a day.\n" + 
-        			"Please reenter your information");
+        	
+        	//handle corner case 1: daily safe calorie intake < daily calorie loss
+        	helper.showReenterPrompt();
+        	
+        	// return response 
         	response.sendRedirect("index.html");
-        } else {
+        } else { 
         	// get response writer
         	PrintWriter writer = response.getWriter();
-        	if(Integer.parseInt(outputMessage[4]) < 1200) {
-        		JOptionPane.showMessageDialog(null, "You are attempting a low-calorie diet. There are huge health risks associated with such diets, and is not recommended. Please consult with a dietician before proceeding");
+        	
+        	//handle corner case 2: daily calorie intake to lose weight is lower than expected healthy value
+        	if(gender.equals("Male") && Integer.parseInt(outputMessage[4]) < 1200 || gender.equals("Female") && Integer.parseInt(outputMessage[4]) < 1000) {
+        		helper.showHealthyWarning();
         	}
-        	// build HTML code
-        	String htmlRespone = "<html>";
-            htmlRespone += "<head><link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\"></head>";      
-            htmlRespone += "<body><div class=\"alert alert-secondary\" role=\"alert\">";  
-            htmlRespone += "<h4 class=\"alert-heading\">Your Weight Loss Target Results Are:</h4>";  
-            htmlRespone += "<p>Your goal is to lose <span class=\"alert-danger\">"+outputMessage[0] +"lb's</span> in <span class=\"alert-danger\">"+outputMessage[1]+" days</span></p>";
-            htmlRespone += "  <p>To maintain your current weight, your safe daily calories intake is around <span class=\"alert-success\">"+outputMessage[2]+" calories</span></p>";  
-            htmlRespone += "<p>To reach your goal, you will need to reduce your daily calories intake with <span class=\"alert-success\">"+outputMessage[3]+" calories</span>, which means to get <span class=\"alert-success\">"+outputMessage[4]+" calories daily</span></p>";  
-            htmlRespone += "</div></body></html>";
+        	
+        	// build HTML response
+        	String htmlResponse = helper.buildHtmlResponse(outputMessage);
 
-            // return response
-            writer.println(htmlRespone);
+            // return response 
+            writer.println(htmlResponse);
         }
         	
         
