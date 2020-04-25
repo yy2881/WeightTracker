@@ -38,6 +38,7 @@ public class Calculator {
 		if ( gender.toLowerCase().equals("male") || gender.toLowerCase().equals("m") ) {
 			inactiveBMR = 66 + (6.23 * currentWeight) + (12.7 * currentHeight) - (6.8 * age); //height is in inches
 		}
+		//655+478.5+304.56-108.1
 		else if (gender.toLowerCase().equals("female") || gender.toLowerCase().equals("f")){
 			inactiveBMR = 655 + (4.35 * currentWeight) + (4.7 * currentHeight) - (4.7 * age);
 		}
@@ -119,11 +120,16 @@ public class Calculator {
 		String [] myArrayOutput = new String [5];
 		int dailyEnergyExpenditure = calculateDailyEnergyExpenditure(calculateInactiveBMR(gender,curWeight,height,age),activityLevel);
 		int dailyCalorieLoss = calculateDailyCalorieLoss(calculateCalorieDeficit(curWeight,tarWeight),targetDays);
+		//goal
 		myArrayOutput[0] = String.valueOf(curWeight-tarWeight);
+		//target days
 		myArrayOutput[1] = String.valueOf(targetDays);
+		//daily Safe calorie intake
 		myArrayOutput[2] = String.valueOf(dailyEnergyExpenditure);
-		myArrayOutput[3] = String.valueOf(calculateDailyCaloricIntake(dailyCalorieLoss,dailyEnergyExpenditure));
-		myArrayOutput[4] = String.valueOf(dailyCalorieLoss);
+		//daily calorie loss
+		myArrayOutput[3] = String.valueOf(dailyCalorieLoss);
+		//daily calorie Intake to lose weight
+		myArrayOutput[4] = String.valueOf(calculateDailyCaloricIntake(dailyCalorieLoss,dailyEnergyExpenditure));
 		return myArrayOutput;
 
 	}
