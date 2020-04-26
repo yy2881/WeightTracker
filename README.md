@@ -1,5 +1,7 @@
 # WeightTracker
-
+## Description: 
+This web app takes in a user's height, weight, age, and activity level information. With that information, it will output critical dietary statistics such as the user's Body Mass Index (BMI), Basal Metabolic Rate (BMR), and Total Daily Energy Expenditure (TDEE). Besides that information, it will estimate how much calories one has to reduce on a daily basis, and how much he/she can intake on a daily basis.
+## Authors: Jonathan Cheong, Yu Yu, Yu Sun
 
 ## Installation Instructions
 1. Download zip and unzip
