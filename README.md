@@ -4,9 +4,14 @@ This web app takes in a user's height, weight, age, and activity level informati
 ### Authors: Jonathan Cheong, Yu Yu, Yu Sun
 
 ## Installation Instructions
-1. Download zip and unzip
+1. Download the respository as a zip
 
-2. Open the project in an IDE
+2. Unzip the files, and open them as project on an IDE (Eclipse)
+
+3. Download and install Apache Tomcat
+  - https://tomcat.apache.org/download-90.cgi
+  - Example of how to setup:
+    - https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/
 
 3. Download Tomcat (https://tomcat.apache.org/download-90.cgi) and setup the server in your IDE (eg. eclipse: https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/)
 <br/>-"Window"-"Show View"-"Other.."-"Server"
