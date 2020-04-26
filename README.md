@@ -4,21 +4,16 @@ This web app takes in a user's height, weight, age, and activity level informati
 ### Authors: Jonathan Cheong, Yu Yu, Yu Sun
 
 ## Installation Instructions
-1. Download the respository as a zip
-
-2. Unzip the files, and open them as project on an IDE (Eclipse)
-
+1. Create a local Java project on Eclipse or your IDE of choice
+2.  Clone from GitHub using the url: https://github.com/yy2881/WeightTracker.git
 3. Download and install Apache Tomcat
   - https://tomcat.apache.org/download-90.cgi
   - Example of how to setup:
     - https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/
 
-3. Download Tomcat (https://tomcat.apache.org/download-90.cgi) and setup the server in your IDE (eg. eclipse: https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/)
-<br/>-"Window"-"Show View"-"Other.."-"Server"
-<br/>-click the link to add the installed tomcat package
-
-4. Right click the project folder and choose "Run on server" or access "localhost:8080/WeightTracker" in a browser
+4. Right click the project folder and choose "Run on server"
+  - Alternatively: Access "localhost:8080/WeightTracker" in a browser
 
 5. Complete the form and click the "Submit" Button
 
-6. Watch diet report
+6. View your dietary statistics
