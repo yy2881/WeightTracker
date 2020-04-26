@@ -1,5 +1,7 @@
 # WeightTracker
 
+
+## Installation Instructions
 1. Download zip and unzip
 
 2. Open the project in an IDE
