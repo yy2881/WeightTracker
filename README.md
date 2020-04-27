@@ -12,7 +12,7 @@ This web app takes in a user's height, weight, age, and activity level informati
      * https://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/
 
 4. Right click the project folder and choose "Run on server"
-   * Alternatively: Access "localhost:8080/WeightTracker" in a browser
+   * Alternatively: Access "**localhost:8080/WeightTracker**" in a browser
 
 5. Complete the form and click the "Submit" Button
 
