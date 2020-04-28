@@ -22,6 +22,6 @@ public class HttpResponseHelper {
 	
 	public void showReenterPrompt() {
 		JOptionPane.showMessageDialog(null, "You should try to lose around 5 to 10% of your current body weight, one to two pounds per week or try to reduce your calorie intake by 500 - 1,000 calories a day.\n" + 
-    			"Please reenter your information");
+    			"Please re-enter your information");
 	}
 }
