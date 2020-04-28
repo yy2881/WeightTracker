@@ -1,4 +1,4 @@
-Project Name:Weight Tracker
+Project Name: Weight Tracker
 
 Project Description:
 This is a nutrition calculator to calculate the user's daily energy conditions and give advice for calorie management. Users can input their current weight, height, age, gender, activity level, estimated days to lose weight, and target weight. The calculator can automatically figure out how many calories need to be intake and loss per day, what is their daily energy expenditure as a diet strategy. 
