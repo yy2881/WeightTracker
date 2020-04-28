@@ -32,13 +32,14 @@ public class MyServlet extends HttpServlet {
 		
 		try {
 			//get input values from html form
-			double currentWeight = Double.parseDouble(request.getParameter("form_curWeight"));
-			double targetWeight = Double.parseDouble(request.getParameter("form_tarWeight"));
-			int activityLevel = Integer.parseInt(request.getParameter("form_activityLevel"));
-			int age = Integer.parseInt(request.getParameter("form_age"));
-			int days = Integer.parseInt(request.getParameter("form_days"));
-			String gender = request.getParameter("form_gender");
-			double height = Double.parseDouble(request.getParameter("form_height")) * 12;
+			double currentWeight = Double.parseDouble(request.getParameter("current_weight"));
+			double targetWeight = Double.parseDouble(request.getParameter("target_weight"));
+			int activityLevel = Integer.parseInt(request.getParameter("activity_level"));
+			int age = Integer.parseInt(request.getParameter("age"));
+			int days = Integer.parseInt(request.getParameter("target_days"));
+			String gender = request.getParameter("gender");
+			double height = Double.parseDouble(request.getParameter("height")) * 12;
+
 			
 			
 
@@ -74,7 +75,7 @@ public class MyServlet extends HttpServlet {
 	            writer.println(htmlResponse);
 	        }
 		} catch (Exception exception) {
-            // Output expected NumberFormatException.
+
 			JOptionPane.showMessageDialog(null, "Your input is not valid. Please don't leave empty fields and make sure you type number or text as instructed.");
 			response.sendRedirect("index.html");
         } 
