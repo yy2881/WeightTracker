@@ -24,7 +24,7 @@ class HttpResponseHelperTest {
 				"<h4 class=\"alert-heading\">Your Weight Loss Target Results Are:</h4>" + 
 				"<p>Your goal is to lose <span class=\"alert-danger\">15lb's</span> in <span class=\"alert-danger\">30 days</span></p>" + 
 				"<p>To maintain your current weight, your safe daily calories intake is around <span class=\"alert-success\">1500 calories</span></p>" + 
-				"<p>To reach your goal, you will need to reduce your daily calories intake with <span class=\"alert-success\">400 calories</span>, which means to get <span class=\"alert-success\">1100 calories daily</span></p>" + 
+				"<p>To reach your goal, you will need to reduce your daily calorie intake by <span class=\"alert-success\">400 calories</span>, which means to get <span class=\"alert-success\">1100 calories daily</span></p>" + 
 				"</div>" + 
 				"</body></html>");
 		
