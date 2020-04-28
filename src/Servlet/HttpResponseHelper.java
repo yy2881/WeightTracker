@@ -10,7 +10,7 @@ public class HttpResponseHelper {
         htmlRespone += "<h4 class=\"alert-heading\">Your Weight Loss Target Results Are:</h4>";  
         htmlRespone += "<p>Your goal is to lose <span class=\"alert-danger\">"+outputMessage[0] +"lb's</span> in <span class=\"alert-danger\">"+outputMessage[1]+" days</span></p>";
         htmlRespone += "  <p>To maintain your current weight, your safe daily calories intake is around <span class=\"alert-success\">"+outputMessage[2]+" calories</span></p>";  
-        htmlRespone += "<p>To reach your goal, you will need to reduce your daily calories intake with <span class=\"alert-success\">"+outputMessage[3]+" calories</span>, which means to get <span class=\"alert-success\">"+outputMessage[4]+" calories daily</span></p>";  
+        htmlRespone += "<p>To reach your goal, you will need to reduce your daily calorie intake by <span class=\"alert-success\">"+outputMessage[3]+" calories</span>, which means to get <span class=\"alert-success\">"+outputMessage[4]+" calories daily</span></p>";  
         htmlRespone += "</div></body></html>";
 		return htmlRespone;
 		
