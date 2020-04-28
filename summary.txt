@@ -6,7 +6,7 @@ This is a nutrition calculator to calculate the user's daily energy conditions a
 Work Breakdown:
 Yu Yu: Developed servlet to connect frontend(index.html) and backend(calculation.java)
 Yu Sun: Developed web page to gather user input (frontend)
-Jonathan Cheong: Developed caculation.java which handles the core calculation procedures(backend)
+Jonathan Cheong: Developed caculation.java which handles the core calculation procedures(backend), and the junit tests (testing.java)
 
 
 Link: https://github.com/yy2881/WeightTracker/
