@@ -1,3 +1,5 @@
+package Calculation;
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -45,29 +47,29 @@ class Testing {
 		void calculateDailyEnergyExpenditure() {
 
 			//test5
-			double inactiveBMR = 1442.545;
-			int activityLevel = 1;
-			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR, activityLevel),1731.05,0.1);
+			double inactiveBMR0 = 1442.545;
+			int activityLevel0 = 1;
+			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR0, activityLevel0),1731.05,0.1);
 
 			//test6
-			double inactiveBMR = 1600;
-			int activityLevel = 2;
-			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR, activityLevel),2200.00,0.1);
+			double inactiveBMR1 = 1600;
+			int activityLevel1 = 2;
+			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR1, activityLevel1),2200.00,0.1);
 
 			//test7
-			double inactiveBMR = 1849.58299;
-			int activityLevel = 3;
-			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR, activityLevel),2866.85,0.1);
+			double inactiveBMR2 = 1849.58299;
+			int activityLevel2 = 3;
+			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR2, activityLevel2),2867,0.1);
 
 			//test8
-			double inactiveBMR = 1849.58299;
-			int activityLevel = 4;
-			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR, activityLevel),3190.53,0.1);
+			double inactiveBMR3 = 1849.58299;
+			int activityLevel3 = 4;
+			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR3, activityLevel3),3191,0.1);
 
 			//test9
-			double inactiveBMR = 1442.545;
-			int activityLevel = 5;
-			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR, activityLevel),2,740.84,0.1);
+			double inactiveBMR4 = 1442.545;
+			int activityLevel4 = 5;
+			assertEquals(calculator.calculateDailyEnergyExpenditure(inactiveBMR4, activityLevel4),2741,0.1);
 
 		}
 
