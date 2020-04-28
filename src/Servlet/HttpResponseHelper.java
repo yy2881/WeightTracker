@@ -17,7 +17,7 @@ public class HttpResponseHelper {
 	}
 	
 	public void showHealthyWarning(){
-		JOptionPane.showMessageDialog(null, "You are attempting a low-calorie diet. There are huge health risks associated with such diets, and is not recommended. Please consult with a dietician before proceeding");
+		JOptionPane.showMessageDialog(null, "You are attempting a low-calorie diet. There are huge health risks associated with such diets, and is not recommended. Please consult with a dietician before proceeding.");
 	}
 	
 	public void showReenterPrompt() {
