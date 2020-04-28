@@ -1,0 +1,12 @@
+Project Name:Weight Tracker
+
+Project Description:
+This is a nutrition calculator to calculate the user's daily energy conditions and give advice for calorie management. Users can input their current weight, height, age, gender, activity level, estimated days to lose weight, and target weight. The calculator can automatically figure out how many calories need to be intake and loss per day, what is their daily energy expenditure as a diet strategy. 
+
+Work Breakdown:
+Yu Yu: Developed servlet to connect frontend(index.html) and backend(calculation.java)
+Yu Sun: Developed web page to gather user input (frontend)
+Jonathan Cheong: Developed caculation.java which handles the core calculation procedures(backend)
+
+
+Link:https://github.com/jonckr/CIT-591-final-project-weight-tracker/tree/master/src
