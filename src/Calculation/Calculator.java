@@ -22,7 +22,7 @@ public class Calculator {
 	 * @param currentHeight
 	 * @return
 	 */
-	private static double calculateBMI(double currentWeight, double currentHeight) {
+	public static double calculateBMI(double currentWeight, double currentHeight) {
 		double BMI = (currentWeight * 700) / (currentHeight * currentHeight);
 		return BMI;
 	}
@@ -35,7 +35,7 @@ public class Calculator {
 	 * @param age
 	 * @return
 	 */
-	private double calculateInactiveBMR(String gender, double currentWeight, double currentHeight, int age) {
+	public double calculateInactiveBMR(String gender, double currentWeight, double currentHeight, int age) {
 		if ( gender.toLowerCase().equals("male") || gender.toLowerCase().equals("m") ) {
 			inactiveBMR = 66 + (6.23 * currentWeight) + (12.7 * currentHeight) - (6.8 * age); //height is in inches
 		}
