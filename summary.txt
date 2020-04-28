@@ -9,4 +9,4 @@ Yu Sun: Developed web page to gather user input (frontend)
 Jonathan Cheong: Developed caculation.java which handles the core calculation procedures(backend)
 
 
-Link:https://github.com/jonckr/CIT-591-final-project-weight-tracker/tree/master/src
+Link: https://github.com/yy2881/WeightTracker/
